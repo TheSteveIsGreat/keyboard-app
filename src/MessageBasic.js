@@ -9,7 +9,12 @@ const MessageBasic = () => {
 
     const handleBackspace = () => {
         console.log(`backspace clicked`)
-        setMessage(message.slice(0,message.length - 1))
+        setMessage(message.slice(0, message.length - 1))
+    }
+
+    const handleSpace = () => {
+        console.log('space clicked')
+        setMessage(message.concat(' '))
     }
 
     const getAlphabet = () => {
@@ -29,12 +34,12 @@ const MessageBasic = () => {
         return jsx
     }
 
-
     return (
         <div>
             <h1>Keyboard App</h1>
-            <p>{message}</p>
+            <p>{message === '' ? 'Click a button' : message}</p>
             {renderKeyboard()}
+            <button onClick={() => handleSpace()}>Space</button>
             <button onClick={() => handleBackspace()}>Backspace</button>
         </div>
     )

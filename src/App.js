@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import MessageBasic from './MessageBasic';
+import DefaultMessage from './DefaultMessage';
 
 function App() {
   return (
